@@ -10,7 +10,7 @@ def arp_display(pkt):
   if pkt[ARP].op == 1: #who-has (request)
     if pkt[ARP].psrc == '0.0.0.0': # ARP Probe
       if pkt[ARP].hwsrc == '74:c2:46:fc:f7:ce': # Dash button
-        print "Pushed ON Dash Button! Now sending text"d
+        print "Pushed ON Dash Button! Now sending text"
     time_var = 'Dogs were fed at ' + time.strftime("%a %b %d %Y %H:%M:%S %p")
 
     message = client.messages.create(body=time_var,
